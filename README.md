@@ -1,6 +1,6 @@
 # Portfolio
 
-Source code for the personal website of Elijah Mwangi, a software engineer
+Source code for the personal website of “Elijah Mwangi, a software engineer
 based in Kenya. The site shows the projects I have built, and hosts my blog on
 .NET, software architecture and what I learn while building an ERP from scratch.
 
