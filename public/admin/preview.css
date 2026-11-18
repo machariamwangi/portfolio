@@ -1,0 +1,16 @@
+:root { color-scheme: light; }
+body { margin: 0; background: #fff; color: #242a33; font: 16px/1.8 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.post-preview { max-width: 720px; margin: 0 auto; padding: 40px 28px 64px; }
+.post-eyebrow { color: #58667a; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+h1 { margin: 16px 0 20px; color: #121a25; font-size: clamp(30px, 6vw, 48px); line-height: 1.15; letter-spacing: -.04em; }
+.post-description { color: #536176; font-size: 20px; line-height: 1.6; }
+.post-meta { padding-bottom: 24px; border-bottom: 1px solid #dfe4ea; color: #69778a; font-size: 13px; }
+.post-body { padding-top: 16px; overflow-wrap: anywhere; }
+.post-body h2, .post-body h3 { margin-top: 1.8em; line-height: 1.3; letter-spacing: -.02em; }
+.post-body img { display: block; max-width: 100%; height: auto; border-radius: 8px; }
+.post-body a { color: #087d8a; text-underline-offset: 3px; }
+.post-body pre { padding: 20px; overflow-x: auto; background: #f0f3f6; border-radius: 8px; font-size: 14px; }
+.post-body code { font-family: Consolas, monospace; }
+.post-body blockquote { margin-left: 0; padding-left: 20px; border-left: 3px solid #087d8a; color: #536176; }
+.post-body table { width: 100%; border-collapse: collapse; }
+.post-body th, .post-body td { padding: 8px 12px; border: 1px solid #dfe4ea; text-align: left; }

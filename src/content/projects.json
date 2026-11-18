@@ -1,0 +1,136 @@
+[
+  {
+    "slug": "loeseke-shop",
+    "title": "Löseke Shop",
+    "category": "Commerce",
+    "description": "A B2B storefront for tools, hardware, and building supplies, with trade accounts and quick ordering.",
+    "url": "https://shop.staging.loeseke.kamsware.com/",
+    "environment": "Staging",
+    "featured": true,
+    "image": "/images/projects/loeseke-shop.jpg",
+    "featuredOrder": 5
+  },
+  {
+    "slug": "kamsguard",
+    "title": "KamsGuard",
+    "category": "Security",
+    "description": "A fire detection platform for monitoring devices, sites, and events across companies.",
+    "url": "https://kamsguard.com/",
+    "environment": "Live",
+    "featured": true,
+    "image": "/images/projects/kamsguard-dashboard.jpg",
+    "featuredOrder": 3,
+    "imageAlt": "KamsGuard dashboard with device, site, company, and event totals above the Quick Access controls."
+  },
+  {
+    "slug": "kenwide-institute",
+    "title": "Kenwide Institute",
+    "category": "Education",
+    "description": "An online German language school with course discovery, learning pathways, and applications.",
+    "url": "https://www.kenwideinstitute.com/",
+    "environment": "Live",
+    "featured": false,
+    "image": "/images/projects/kenwide-institute.jpg"
+  },
+  {
+    "slug": "lehigh-talent-academy",
+    "title": "Lehigh Talent Academy",
+    "category": "Education",
+    "description": "The academy's website, connecting its educational offering with prospective learners and families.",
+    "url": "https://lehightalentacademy.com/home",
+    "environment": "Live",
+    "featured": true,
+    "image": "/images/projects/lehigh-talent-academy.jpg",
+    "featuredOrder": 1
+  },
+  {
+    "slug": "lehigh-talent-foundation",
+    "title": "Lehigh Talent Academy Foundation",
+    "category": "Education",
+    "description": "A website presenting the foundation and its work in support of learning and talent.",
+    "url": "https://lehightalentacademyfoundation.org/",
+    "environment": "Live",
+    "featured": false,
+    "image": "/images/projects/lehigh-talent-foundation.jpg"
+  },
+  {
+    "slug": "lehigh-erp",
+    "title": "Lehigh Academy ERP",
+    "category": "Enterprise",
+    "description": "An academy management system with admissions, academics, attendance, finance, and school operations.",
+    "url": "https://lehightalentacademy.com",
+    "environment": "Development",
+    "featured": false,
+    "image": "/images/projects/lehigh-erp.jpg"
+  },
+  {
+    "slug": "motor-epc",
+    "title": "Motor EPC",
+    "category": "Commerce",
+    "description": "A web application for exploring an automotive electronic parts catalogue.",
+    "url": "https://motorepc.kamsware.com/",
+    "environment": "Live",
+    "featured": true,
+    "image": "/images/projects/motor-epc.jpg",
+    "featuredOrder": 4
+  },
+  {
+    "slug": "stoebich-smc",
+    "title": "Stöbich SMC",
+    "category": "Enterprise",
+    "description": "An IoT management interface with asset management, telemetry, notifications, and configuration tools.",
+    "url":"https://www.stoebich.com/en/solutions/early-detection/fire-multi-detector", 
+    "environment": "Live",
+    "featured": true,
+    "image": "/images/projects/stoebich-smc.jpg",
+    "featuredOrder": 2
+  },
+  {
+    "slug": "internet-banking",
+    "title": "Solution Sacco Internet Banking",
+    "category": "Finance",
+    "description": "A member banking portal for account transfers, M-Pesa withdrawals, and deposits.",
+    "url": "https://solutionsacco.com/",
+    "environment": "Staging",
+    "featured": false,
+    "image": "/images/projects/solution-sacco-dashboard.png",
+    "showFullScreenshot": true,
+    "imageAlt": "Solution Sacco member dashboard showing account summaries, a savings distribution chart, and quick actions for transfers, withdrawals, and deposits."
+  },
+  {
+    "slug": "mentor-management-system",
+    "title": "Mentor Management System",
+    "category": "Education",
+    "organization": "Andela",
+    "description": "A dashboard for Andela’s ALC program where mentor managers can track programs, review reports, and follow up on tasks.",
+    "contribution": "From April to August 2023, I contributed to the system’s architecture and helped build its backend in C# and .NET as a remote open-source contributor.",
+    "featured": false,
+    "image": "/images/projects/mentor-management-system.png",
+    "showFullScreenshot": true,
+    "imageAlt": "Mentor manager dashboard showing active programs, mentor and report counts, submitted scholarship reports, and tasks grouped by progress.",
+    "galleryTitle": " ",
+    "gallery": [
+      {
+        "image": "/images/projects/mentor-program-detail.jpg",
+        "width": 844,
+        "height": 600,
+        "caption": "Program details and mentor assignments",
+        "alt": "Scholarship program details beside the program list, with a count of assigned mentors and an option to request to join."
+      },
+      {
+        "image": "/images/projects/mentor-task-creation.jpg",
+        "width": 844,
+        "height": 600,
+        "caption": "Creating a task for a mentor",
+        "alt": "New task form with fields for a title and task details, a mentor selection control, and the Create Task button."
+      },
+      {
+        "image": "/images/projects/mentor-report-review.jpg",
+        "width": 844,
+        "height": 600,
+        "caption": "Reviewing a program report",
+        "alt": "Scholarship report open beside the report list, with sections for achievements, blockers, and recommendations and options to share or download."
+      }
+    ]
+  }
+]

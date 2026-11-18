@@ -1,0 +1,120 @@
+{
+  "name": "Elijah Mwangi",
+  "role": "Technical Leader & Software Engineer",
+  "intro": "I build software that makes complex work easier. I design the interfaces people use, build the systems behind them, and write about what I learn along the way.",
+  "email": "hello@elijahmwangi.net",
+  "phone": "+254711281280",
+  "location": "Nairobi, Kenya",
+  "github": "https://github.com/machariamwangi",
+  "linkedin": "https://www.linkedin.com/in/elijah-mwangi-531943121/",
+  "cv": "https://drive.google.com/file/d/1LJNm0g_OHpMzsRpKU9DPWko7u7c5uzny/view",
+  "biography": [
+    "I'm a software engineer based in Nairobi, Kenya. I enjoy working across a product, connecting clear interfaces with the systems and services that make them work.",
+    "My experience spans .NET and C# backend development, React and Angular interfaces, and applications for finance, education, commerce, and business operations.",
+    "This is a home for the projects I've worked on and the things I learn along the way."
+  ],
+  "skills": [
+    {
+      "category": "Backend",
+      "items": [
+        "C#",
+        ".NET Core",
+        "ASP.NET",
+        "OData",
+        "SQL",
+        "RabbitMQ",
+        "OpenID"
+      ]
+    },
+    {
+      "category": "Frontend",
+      "items": [
+        "JavaScript",
+        "React",
+        "Angular",
+        "HTML",
+        "CSS",
+        "Sass",
+        "Material UI",
+        "Bootstrap"
+      ]
+    },
+    {
+      "category": "Cloud & tools",
+      "items": [
+        "Azure",
+        "Docker",
+        "Firebase",
+        "MongoDB",
+        "Swagger",
+        "Jira",
+        "Kibana"
+      ]
+    },
+    {
+      "category": "Testing",
+      "items": [
+        "xUnit",
+        "NUnit",
+        "Selenium",
+        "Unit testing",
+        "Integration testing"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Lead Engineer",
+      "company": "Kamsware LTD",
+      "period": "April 2024 – Present",
+      "description": "I lead the engineering team at Kamsware, guide software architecture decisions, and see projects through from planning to deployment."
+    },
+    {
+      "role": ".NET Developer",
+      "company": "Stöbich Holding GmbH",
+      "period": "June 2021 – June 2026",
+      "description": "Worked on applications and websites for fire protection solutions, including work with .NET and ML.NET."
+    },
+    {
+      "role": "ALC Open Source Contributor · Backend Engineer (C#/.NET)",
+      "company": "Andela",
+      "period": "April 2023 – August 2023 · 5 months",
+      "location": "Remote",
+      "description": "I contributed to the architecture and backend development of the Mentor Management System for the Andela Learning Community (ALC).",
+      "project": {
+        "slug": "mentor-management-system",
+        "title": "Mentor Management System"
+      }
+    },
+    {
+      "role": "Full Stack Developer",
+      "company": "Kamsware LTD",
+      "period": "February 2021 – May 2021",
+      "description": "Worked on response, distribution, and business applications, with .NET Core, ASP.NET, and single-page interfaces."
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "Jambo Pay Ltd",
+      "period": "October 2020 – January 2021",
+      "description": "Built React interfaces for payment systems and participated in work on the Nairobi revenue collection system and Jambo Pay portal."
+    },
+    {
+      "role": "Frontend Engineer",
+      "company": "Binary Limited",
+      "period": "October 2019 – October 2020",
+      "description": "Worked on interfaces for financial and banking products, including internet banking, core banking, and business management applications."
+    },
+    {
+      "role": "Assistant Web Developer",
+      "company": "Banking and Machine Services",
+      "period": "July 2019 – September 2019",
+      "description": "Helped develop websites and applications for company use."
+    },
+    {
+      "role": "ICT Intern",
+      "company": "Safety-plus Consulting Ltd.",
+      "period": "April 2019 – June 2019",
+      "description": "Worked on the company website, publication design, and a system for financial record keeping."
+    }
+  ]
+}

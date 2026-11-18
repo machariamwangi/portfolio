@@ -1,0 +1,136 @@
+# Local editing writes to disk through `npm run cms` (decap-server).
+# Hosted editing uses GitHub OAuth; see CMS-SETUP.md before enabling it.
+local_backend: true
+publish_mode: editorial_workflow
+
+backend:
+  name: github
+  repo: machariamwangi/portfolio
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+display_url: /
+show_preview_links: false
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: posts
+    label: Blog posts
+    label_singular: Blog post
+    description: Write, preview, and save your articles. Keep unfinished articles marked as drafts.
+    folder: src/content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}} · {{date}}"
+    sortable_fields: [date, title]
+    view_filters:
+      - label: Drafts
+        field: draft
+        pattern: true
+      - label: Published
+        field: draft
+        pattern: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Date
+        name: date
+        widget: datetime
+        default: "{{now}}"
+        date_format: YYYY-MM-DD
+        time_format: false
+      - label: Short description
+        name: description
+        widget: text
+        hint: A brief introduction for the blog listing and search previews.
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+        default: []
+        hint: Separate topics with commas, for example engineering, web development.
+      - label: Collection
+        name: category
+        widget: select
+        options: ['C# & .NET', 'Delivery & CI', 'DevOps & Jira', 'Git & Teams', 'Notes']
+        default: Notes
+      - label: Cover image
+        name: cover
+        widget: image
+        required: false
+      - label: Cover image description
+        name: coverAlt
+        widget: string
+        required: false
+        hint: Describe the image for readers using assistive technology.
+      - label: Small cover image (optional)
+        name: coverSmall
+        widget: image
+        required: false
+        hint: A 768-pixel-wide version of the same image for smaller screens.
+      - label: Cover focal point
+        name: coverFocus
+        widget: number
+        value_type: int
+        default: 50
+        min: 0
+        max: 100
+        required: false
+        hint: Vertical focal point when the image fills a wide frame (0 is the top, 50 the center, 100 the bottom).
+      - label: Photo credit (optional)
+        name: coverCredit
+        widget: object
+        required: false
+        collapsed: true
+        hint: Credit the photographer and link to the original photo and its license.
+        fields:
+          - {label: Photographer, name: author, widget: string}
+          - {label: Original photo URL (HTTPS), name: source, widget: string}
+          - {label: License, name: license, widget: string}
+          - {label: License URL (HTTPS), name: licenseUrl, widget: string}
+      - label: Last updated
+        name: updated
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        required: false
+      - label: Feature this article
+        name: featured
+        widget: boolean
+        default: false
+      - label: Collection order
+        name: order
+        widget: number
+        value_type: int
+        default: 100
+        min: 1
+        required: false
+      - label: Flow diagram
+        name: diagram
+        widget: object
+        required: false
+        collapsed: true
+        hint: The build creates /images/diagrams/ARTICLE-SLUG.svg. Insert that image path in the article body. Flow and cycle use 3–6 steps; branch uses exactly 5 (start, two alternatives, rejoin, verify).
+        fields:
+          - {label: Diagram title, name: title, widget: string}
+          - {label: Diagram type, name: kind, widget: select, options: [flow, branch, cycle], default: flow}
+          - {label: Steps, name: steps, widget: list, min: 3, max: 6}
+          - {label: Caption, name: caption, widget: text}
+      - label: Keep as draft
+        name: draft
+        widget: boolean
+        default: true
+        hint: Drafts are saved but excluded from the public blog. Turn this off when the article is ready.
+      - label: Article
+        name: body
+        widget: markdown
+        modes: [rich_text, raw]

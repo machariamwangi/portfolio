@@ -1,0 +1,35 @@
+{
+  "name": "elijah-mwangi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "next build --webpack",
+    "preview": "node scripts/serve.mjs",
+    "cms": "decap-server",
+    "check": "npm run build && node --test tests/*.test.mjs",
+    "prebuild": "node scripts/prepare-assets.mjs",
+    "start": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "highlight.js": "11.12.0",
+    "markdown-it": "14.3.3",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "decap-server": "3.11.6"
+  },
+  "overrides": {
+    "@decap/cli": {
+      "@hapi/joi": "npm:joi@17.13.9",
+      "zod": "4.6.7"
+    }
+  }
+}

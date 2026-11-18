@@ -1,0 +1,147 @@
+{
+  "checkedAt": "2026-11-18",
+  "articles": [
+    {
+      "slug": "jira-cloud-setup-for-a-real-team",
+      "words": 1174,
+      "sources": [
+        {
+          "title": "Atlassian explains the configuration differences",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/what-are-team-managed-and-company-managed-spaces/"
+        },
+        {
+          "title": "The current creation guide lists the supported sequence",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/create-a-new-project/"
+        },
+        {
+          "title": "Atlassian documents team-managed access and inherited roles",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/manage-how-people-access-your-team-managed-project/"
+        },
+        {
+          "title": "The column configuration guide explains these behaviors",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/configure-columns/"
+        },
+        {
+          "title": "Atlassian describes the flow actor and its permissions",
+          "url": "https://support.atlassian.com/cloud-automation/docs/what-is-a-rule-actor/"
+        }
+      ]
+    },
+    {
+      "slug": "jira-delivery-from-backlog-to-release",
+      "words": 1138,
+      "sources": [
+        {
+          "title": "Atlassian documents both estimation configurations",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/configure-estimation-and-tracking/"
+        },
+        {
+          "title": "The Scrum backlog guide explains those controls",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/use-your-scrum-backlog"
+        },
+        {
+          "title": "Atlassian describes the company-managed Kanban backlog",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/use-your-kanban-backlog/"
+        },
+        {
+          "title": "The releases guide covers the current setup",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/enable-releases-and-versions/"
+        },
+        {
+          "title": "Atlassian explains the company-managed report",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/view-and-understand-the-cumulative-flow-diagram/"
+        }
+      ]
+    },
+    {
+      "slug": "production-operations-that-close-the-loop",
+      "words": 1147,
+      "sources": [
+        {
+          "title": "Google's SLO workbook explains how objectives support reliability decisions",
+          "url": "https://sre.google/workbook/implementing-slos/"
+        },
+        {
+          "title": "Google's monitoring chapter describes user-visible signals and monitoring tradeoffs",
+          "url": "https://sre.google/sre-book/monitoring-distributed-systems/"
+        },
+        {
+          "title": "Google's alerting chapter develops multiwindow burn-rate alerts",
+          "url": "https://sre.google/workbook/alerting-on-slos/"
+        },
+        {
+          "title": "Google's incident-response guidance emphasizes coordination and mitigation",
+          "url": "https://sre.google/workbook/incident-response/"
+        },
+        {
+          "title": "Google's postmortem guidance explains the purpose of a blameless review",
+          "url": "https://sre.google/sre-book/postmortem-culture/"
+        }
+      ]
+    },
+    {
+      "slug": "git-worktrees-bisect-reflog",
+      "words": 1092,
+      "sources": [
+        {
+          "title": "The status manual explains how Git reports these states",
+          "url": "https://git-scm.com/docs/git-status"
+        },
+        {
+          "title": "The worktree documentation describes this model",
+          "url": "https://git-scm.com/docs/git-worktree"
+        },
+        {
+          "title": "See the official show reference",
+          "url": "https://git-scm.com/docs/git-show"
+        },
+        {
+          "title": "The bisect manual explains its classifications and exit codes",
+          "url": "https://git-scm.com/docs/git-bisect"
+        },
+        {
+          "title": "The reflog reference describes local history and expiry",
+          "url": "https://git-scm.com/docs/git-reflog"
+        }
+      ]
+    },
+    {
+      "slug": "git-commits-built-for-review",
+      "words": 1159,
+      "sources": [
+        {
+          "title": "The add manual describes patch selection and its boundaries",
+          "url": "https://git-scm.com/docs/git-add"
+        },
+        {
+          "title": "The commit reference explains those distinctions",
+          "url": "https://git-scm.com/docs/git-commit"
+        },
+        {
+          "title": "The rebase manual covers autosquash and conflict handling",
+          "url": "https://git-scm.com/docs/git-rebase"
+        },
+        {
+          "title": "The rerere documentation explains resolution reuse",
+          "url": "https://git-scm.com/docs/git-rerere"
+        },
+        {
+          "title": "The range-diff reference explains its comparison model",
+          "url": "https://git-scm.com/docs/git-range-diff"
+        }
+      ]
+    }
+  ],
+  "supplementarySources": [
+    "https://support.atlassian.com/jira-software-cloud/docs/set-up-issue-types-in-team-managed-projects/",
+    "https://support.atlassian.com/jira-software-cloud/docs/enable-the-backlog/",
+    "https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/",
+    "https://support.atlassian.com/jira-software-cloud/docs/find-specific-work-items/",
+    "https://git-scm.com/docs/git-config.html"
+  ],
+  "caveats": [
+    "Jira Cloud uses space/work item/work type terminology; individual UI rollouts and plan-dependent permissions vary.",
+    "Git examples assume origin/main and explicitly local or otherwise rewrite-authorized history; placeholders require verified hashes.",
+    "Example products, service objectives, inputs, and workflows are illustrative, not claims about client systems."
+  ]
+}

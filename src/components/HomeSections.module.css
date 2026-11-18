@@ -1,0 +1,324 @@
+.sections {
+  background: var(--wash);
+  color: var(--text);
+}
+
+.sections > section {
+  scroll-margin-top: 5rem;
+}
+
+.about,
+.explore,
+.work,
+.sections > :global(.notebook-section) {
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.about,
+.sections > :global(.notebook-section) {
+  background: var(--deep);
+  border-block: 1px solid var(--border);
+  margin: 0;
+}
+
+.story {
+  max-width: 46rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.story h2,
+.headingRow h2,
+.exploreHeading,
+.contactRow h2 {
+  color: var(--text);
+  font-size: clamp(2.15rem, 3.5vw, 3.25rem);
+  letter-spacing: -.047em;
+  line-height: 1.07;
+  font-weight: 600;
+  margin: 0;
+}
+
+.story h2 {
+  max-width: 23ch;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.story p:not(.kicker) {
+  max-width: 63ch;
+  margin: 1.2rem auto 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.kicker {
+  margin: 0 0 .9rem;
+  color: var(--link);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.sections .inlineLink,
+.sections .email {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  min-height: 2.75rem;
+  color: var(--link);
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.inlineLink {
+  font-size: .9375rem;
+}
+
+.story .inlineLink {
+  margin-top: 1rem;
+}
+
+.inlineLink svg,
+.email svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+.sections .inlineLink:hover,
+.sections .email:hover {
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+
+.explore {
+  padding-bottom: 0;
+}
+
+.exploreHeading {
+  margin-bottom: clamp(1.5rem, 3vw, 2.4rem);
+  text-align: center;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.8rem, 1.7vw, 1.25rem);
+}
+
+.sections .destination {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: clamp(1.15rem, 2vw, 1.65rem);
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .2s ease;
+}
+
+.sections .destination:hover,
+.sections .destination:focus-visible {
+  border-color: var(--link);
+}
+
+.sections .destination:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+.destinationIcon {
+  display: grid;
+  place-items: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  margin-bottom: 1.15rem;
+  border-radius: 9px;
+  color: var(--link);
+  background: color-mix(in srgb, var(--link) 11%, var(--card));
+}
+
+.destinationIcon svg {
+  width: 1.22rem;
+  height: 1.22rem;
+}
+
+.destinationTitle {
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -.025em;
+  line-height: 1.24;
+}
+
+.destinationDetail {
+  margin-top: .45rem;
+  color: var(--muted);
+  font-size: .91rem;
+  line-height: 1.52;
+}
+
+.destinationArrow {
+  position: absolute;
+  top: 1.55rem;
+  right: 1.25rem;
+  width: .95rem;
+  height: .95rem;
+  color: var(--muted);
+}
+
+.headingRow,
+.contactRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2.5rem;
+}
+
+.headingRow {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.headingRow .inlineLink {
+  flex-shrink: 0;
+}
+
+.projectGrid,
+.articleGrid {
+  display: grid;
+  gap: clamp(.95rem, 1.8vw, 1.5rem);
+}
+
+.projectGrid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.projectGrid > article {
+  grid-column: span 2;
+}
+
+.projectGrid > article:nth-child(-n+2) {
+  grid-column: span 3;
+}
+
+.projectGrid :global(.project-image) {
+  aspect-ratio: 2.05;
+}
+
+.projectGrid :global(.project-body),
+.articleGrid :global(.blog-card-body) {
+  padding: clamp(1.1rem, 2vw, 1.7rem);
+}
+
+.projectGrid :global(.project-card),
+.articleGrid :global(.blog-card.editorial-card) {
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.projectGrid :global(.project-body) > p,
+.articleGrid :global(.blog-card-body) > p {
+  font-size: .95rem;
+  line-height: 1.65;
+}
+
+.projectGrid :global(.project-body) h3,
+.articleGrid :global(.blog-card-body) h3 {
+  font-size: clamp(1.23rem, 1.8vw, 1.55rem);
+  line-height: 1.23;
+}
+
+.projectGrid :global(.project-links .text-link),
+.articleGrid :global(.blog-card-foot) a {
+  font-size: .83rem;
+}
+
+.articleGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.articleGrid :global(.cover-index) {
+  display: none;
+}
+
+.contact {
+  padding-block: clamp(3.3rem, 6vw, 5rem);
+}
+
+.contactRow h2 {
+  font-size: clamp(1.85rem, 2.7vw, 2.5rem);
+}
+
+.email {
+  font-size: clamp(.95rem, 1.6vw, 1.22rem);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 850px) {
+  .destinations,
+  .projectGrid,
+  .articleGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projectGrid > article,
+  .projectGrid > article:nth-child(-n+2) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .articleGrid,
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .headingRow,
+  .contactRow {
+    flex-wrap: wrap;
+    gap: .45rem 1.2rem;
+  }
+
+  .projectGrid :global(.project-image) {
+    aspect-ratio: 1.8;
+  }
+}
+
+@media (max-width: 520px) {
+  .story p:not(.kicker) {
+    text-align: start;
+  }
+
+  .destinations {
+    grid-template-columns: 1fr;
+  }
+
+  .sections .destination {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: .3rem .8rem;
+  }
+
+  .destinationIcon {
+    grid-row: 1 / 3;
+    margin: 0;
+  }
+
+  .destinationDetail {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .destinationArrow {
+    position: static;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+  }
+}

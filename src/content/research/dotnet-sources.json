@@ -1,0 +1,293 @@
+{
+  "reviewedOn": "2026-11-18",
+  "releaseBaseline": {
+    "dotnet11": {
+      "releaseDate": "2026-11-10",
+      "support": "STS",
+      "endOfSupport": "2028-11-14"
+    },
+    "dotnet10": {
+      "support": "LTS",
+      "endOfSupport": "2028-11-14"
+    },
+    "csharp15": "Stable default for net11.0; memory safety remains preview.",
+    "sources": [
+      "https://dotnet.microsoft.com/en-us/platform/support/policy",
+      "https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/",
+      "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-15"
+    ]
+  },
+  "toolchain": {
+    "sdk": "10.0.401",
+    "installedRuntime": "Microsoft.NETCore.App 10.0.12",
+    "installedAspNetCoreRuntime": "Microsoft.AspNetCore.App 10.0.12",
+    "os": "Windows",
+    "sdk11Installed": false
+  },
+  "verification": {
+    "method": "Extracted article C# fences into isolated projects outside content and compiled with dotnet build -c Release; ran the article API tests with dotnet test -c Release.",
+    "temporaryDirectory": "artifacts/dotnet-snippet-check-gVBoUy",
+    "sourceFilesChanged": "Only the ten assigned article Markdown files and this research manifest.",
+    "nativePublishExecuted": false,
+    "performanceBenchmarksExecuted": false,
+    "limitations": [
+      "C#15/net11 snippets are documentation-reviewed, not compiled.",
+      "Native AOT managed build passed but a locally selected older ILCompiler pack reported a known advisory; article directs readers to serviced SDK/compiler packs.",
+      "Compilation checks do not certify production behavior, external HTTP dependencies, database concurrency, telemetry export, or deployment compatibility."
+    ]
+  },
+  "articles": [
+    {
+      "filename": "src/content/posts/dotnet-11-upgrade-with-confidence.md",
+      "slug": "dotnet-11-upgrade-with-confidence",
+      "order": 1,
+      "bodyWords": 1008,
+      "proseWords": 949,
+      "sources": [
+        "https://dotnet.microsoft.com/en-us/platform/support/policy",
+        "https://learn.microsoft.com/en-us/dotnet/core/tools/global-json",
+        "https://learn.microsoft.com/en-us/aspnet/core/migration/100-to-110",
+        "https://learn.microsoft.com/en-us/dotnet/core/compatibility/11",
+        "https://learn.microsoft.com/en-us/dotnet/core/compatibility/jit/11/minimum-hardware-requirements"
+      ],
+      "validation": {
+        "status": "official-documentation-reviewed",
+        "note": "SDK11 is not installed, so the upgrade example was not compiled/executed."
+      }
+    },
+    {
+      "filename": "src/content/posts/csharp-15-modeling-business-outcomes.md",
+      "slug": "csharp-15-modeling-business-outcomes",
+      "order": 2,
+      "bodyWords": 1047,
+      "proseWords": 887,
+      "sources": [
+        "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-15",
+        "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/union",
+        "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/switch-expression",
+        "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/closed",
+        "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/collection-expressions"
+      ],
+      "validation": {
+        "status": "official-documentation-reviewed",
+        "note": "SDK11/C#15 is not installed. Union, closed hierarchy, collection arguments, and default-union null behavior were checked against current Microsoft references and separately reviewed by another agent."
+      }
+    },
+    {
+      "filename": "src/content/posts/async-cancellation-deadlines-dotnet.md",
+      "slug": "async-cancellation-deadlines-dotnet",
+      "order": 3,
+      "bodyWords": 1047,
+      "proseWords": 935,
+      "sources": [
+        "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/",
+        "https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads",
+        "https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.whenall",
+        "https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/task-cancellation"
+      ],
+      "validation": {
+        "project": "cancellation",
+        "status": "compiled",
+        "warnings": 0,
+        "resolvedDirectPackages": []
+      }
+    },
+    {
+      "filename": "src/content/posts/minimal-api-validation-problem-details.md",
+      "slug": "minimal-api-validation-problem-details",
+      "order": 4,
+      "bodyWords": 1002,
+      "proseWords": 892,
+      "sources": [
+        "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-11.0",
+        "https://learn.microsoft.com/en-us/aspnet/core/validation/overview",
+        "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling-api",
+        "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling"
+      ],
+      "validation": {
+        "project": "validation",
+        "status": "compiled",
+        "warnings": 0,
+        "note": "Shared framework supplied validation APIs; redundant explicit package reference removed after NU1510.",
+        "resolvedDirectPackages": []
+      }
+    },
+    {
+      "filename": "src/content/posts/ef-core-query-performance-concurrency.md",
+      "slug": "ef-core-query-performance-concurrency",
+      "order": 5,
+      "bodyWords": 1127,
+      "proseWords": 908,
+      "sources": [
+        "https://learn.microsoft.com/en-us/ef/core/performance/efficient-querying",
+        "https://learn.microsoft.com/en-us/ef/core/querying/pagination",
+        "https://learn.microsoft.com/en-us/ef/core/saving/concurrency",
+        "https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/"
+      ],
+      "validation": {
+        "project": "ef",
+        "status": "compiled",
+        "warnings": 0,
+        "note": "SQL Server integration/concurrency behavior was not executed; no database was configured.",
+        "resolvedDirectPackages": [
+          {
+            "id": "Microsoft.EntityFrameworkCore.SqlServer",
+            "version": "10.0.15"
+          }
+        ]
+      }
+    },
+    {
+      "filename": "src/content/posts/resilient-httpclient-retries-timeouts.md",
+      "slug": "resilient-httpclient-retries-timeouts",
+      "order": 6,
+      "bodyWords": 1016,
+      "proseWords": 900,
+      "sources": [
+        "https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/http/httpclient-guidelines",
+        "https://learn.microsoft.com/en-us/dotnet/core/resilience/http-resilience",
+        "https://raw.githubusercontent.com/dotnet/runtime/v10.0.15/src/libraries/System.Net.Http/src/System/Net/Http/HttpClient.cs",
+        "https://learn.microsoft.com/en-us/dotnet/core/extensions/httpclient-factory"
+      ],
+      "validation": {
+        "project": "http",
+        "status": "compiled",
+        "warnings": 0,
+        "note": "Final snippet includes linked ten-second outer deadline for response buffering and JSON parsing.",
+        "resolvedDirectPackages": [
+          {
+            "id": "Microsoft.Extensions.Http.Resilience",
+            "version": "10.0.0"
+          }
+        ]
+      }
+    },
+    {
+      "filename": "src/content/posts/bounded-background-jobs-dotnet-channels.md",
+      "slug": "bounded-background-jobs-dotnet-channels",
+      "order": 7,
+      "bodyWords": 1108,
+      "proseWords": 905,
+      "sources": [
+        "https://learn.microsoft.com/en-us/dotnet/core/extensions/channels",
+        "https://learn.microsoft.com/en-us/dotnet/core/extensions/scoped-service",
+        "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services"
+      ],
+      "validation": {
+        "project": "channels",
+        "status": "compiled",
+        "warnings": 0,
+        "resolvedDirectPackages": []
+      }
+    },
+    {
+      "filename": "src/content/posts/opentelemetry-useful-dotnet-signals.md",
+      "slug": "opentelemetry-useful-dotnet-signals",
+      "order": 8,
+      "bodyWords": 1024,
+      "proseWords": 861,
+      "sources": [
+        "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/observability-with-otel",
+        "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-instrumentation-walkthroughs",
+        "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics-instrumentation"
+      ],
+      "validation": {
+        "project": "otel",
+        "status": "compiled",
+        "warnings": 0,
+        "note": "No collector/backend end-to-end export test was performed.",
+        "resolvedDirectPackages": [
+          {
+            "id": "OpenTelemetry.Exporter.OpenTelemetryProtocol",
+            "version": "1.21.0"
+          },
+          {
+            "id": "OpenTelemetry.Extensions.Hosting",
+            "version": "1.21.0"
+          },
+          {
+            "id": "OpenTelemetry.Instrumentation.AspNetCore",
+            "version": "1.21.0"
+          },
+          {
+            "id": "OpenTelemetry.Instrumentation.Http",
+            "version": "1.21.0"
+          }
+        ]
+      }
+    },
+    {
+      "filename": "src/content/posts/native-aot-practical-dotnet-api.md",
+      "slug": "native-aot-practical-dotnet-api",
+      "order": 9,
+      "bodyWords": 990,
+      "proseWords": 907,
+      "sources": [
+        "https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/",
+        "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/native-aot",
+        "https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/source-generation",
+        "https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/fixing-warnings"
+      ],
+      "validation": {
+        "project": "aot",
+        "status": "managed-build-passed",
+        "warnings": 2,
+        "note": "PublishAot enabled for managed build/analysis. Native publish was not executed. SDK-selected Microsoft.DotNet.ILCompiler 10.0.12 emitted NU1903 for GHSA-p3jp-9v83-76w9; no native deployment is certified.",
+        "advisory": "https://github.com/advisories/GHSA-p3jp-9v83-76w9",
+        "resolvedDirectPackages": [
+          {
+            "id": "Microsoft.DotNet.ILCompiler",
+            "version": "10.0.12"
+          },
+          {
+            "id": "Microsoft.NET.ILLink.Tasks",
+            "version": "10.0.12"
+          }
+        ]
+      }
+    },
+    {
+      "filename": "src/content/posts/integration-testing-aspnet-core-contracts.md",
+      "slug": "integration-testing-aspnet-core-contracts",
+      "order": 10,
+      "bodyWords": 1084,
+      "proseWords": 918,
+      "sources": [
+        "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit",
+        "https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests",
+        "https://learn.microsoft.com/en-us/ef/core/testing/choosing-a-testing-strategy",
+        "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test",
+        "https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-intro"
+      ],
+      "validation": {
+        "project": "QuoteApi.Tests",
+        "status": "four-tests-passed",
+        "warnings": 0,
+        "tests": {
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0
+        },
+        "note": "Final Assert.Contains version compiled and passed outside sandbox so VSTest could communicate with its local test host.",
+        "resolvedDirectPackages": [
+          {
+            "id": "Microsoft.AspNetCore.Mvc.Testing",
+            "version": "10.0.15"
+          },
+          {
+            "id": "Microsoft.NET.Test.Sdk",
+            "version": "18.12.0"
+          },
+          {
+            "id": "xunit",
+            "version": "2.9.3"
+          },
+          {
+            "id": "xunit.runner.visualstudio",
+            "version": "3.1.5"
+          }
+        ]
+      }
+    }
+  ]
+}
