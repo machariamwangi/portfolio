@@ -43,7 +43,7 @@ npm run preview
 
 `npm run check` builds the production site into `out/` and runs the test suite. The build also generates the search index, RSS feed, sitemap, and article diagrams. The dev server and static preview both use port `4173` by default. Stop the dev server before starting the preview.
 
-To deploy, run `npm run build` and publish `out/` to a static host. The default site URL is `https://elijahmwangi.net`. Set `SITE_URL` at build time when deploying under a different domain.
+To deploy, run `npm run build` and publish `out/` to a static host. The default site URL is `https://elijahmwangi.net`.
 
 ## Contact
 
