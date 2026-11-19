@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -31,6 +32,18 @@ before(async () => {
   projects = JSON.parse(await fs.readFile(path.join(contentDirectory, 'projects.json'), 'utf8'));
   publishedPosts = await readPosts(postDirectory);
   generatedFiles = await walk(output);
+});
+
+test('the portfolio and writing desk change favicon URLs when the artwork changes', async () => {
+  const pages = await Promise.all([read('index.html'), read('admin/index.html')]);
+  for (const filename of ['favicon.ico', 'favicon.svg']) {
+    const bytes = await fs.readFile(path.join(output, filename));
+    const content = filename.endsWith('.svg') ? bytes.toString('utf8').replaceAll('\r\n', '\n') : bytes;
+    const version = createHash('sha256').update(content).digest('hex').slice(0, 8);
+    for (const page of pages) {
+      assert.ok(page.includes(`href="/${filename}?v=${version}"`), `Update the ${filename} URL in both document heads`);
+    }
+  }
 });
 
 test('the build includes each project with its detail route and any supplied destination URL', async () => {
