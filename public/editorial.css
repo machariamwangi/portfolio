@@ -106,10 +106,12 @@ body{font-size:16px;line-height:1.75}::selection{background:#c9dec0;color:#183b3
   gap: 20px;
 }
 
+.brand { min-height: 44px; }
+
 .brand-logo {
   display: block;
   flex: none;
-  width: 100px;
+  width: 208px;
   height: auto;
 }
 
@@ -174,7 +176,7 @@ body{font-size:16px;line-height:1.75}::selection{background:#c9dec0;color:#183b3
 }
 
 @media (max-width: 1023px) {
-  .brand-logo { width: 84px; }
+  .brand-logo { width: clamp(148px, 42vw, 186px); }
   [data-page="home"] .header-inner { height: 65px; gap: 7px; }
   [data-page="home"] .header-actions { border: 0; padding: 0; }
   [data-page="home"] .header-actions .icon-button,
