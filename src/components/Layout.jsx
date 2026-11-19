@@ -393,7 +393,7 @@ export default function Layout({
             <Icon name="menu" />
           </button>
           <Link ref={brandRef} className="brand" href="/" aria-label={`${profile.name} home`}>
-            <img className="brand-logo" src="/images/elijah-mwangi-logo.png" width="90" height="59" alt="" />
+            <img className="brand-logo" src="/images/elijah-mwangi-logo.svg" width="100" height="66" alt="" />
           </Link>
           {home && searchButton}
           <nav className="desktop-nav" aria-label="Main navigation">

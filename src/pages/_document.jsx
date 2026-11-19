@@ -25,6 +25,7 @@ export default function Document({ __NEXT_DATA__ }) {
       <Head>
         <meta name="theme-color" content={home ? darkColor : lightColor} data-dark={darkColor} data-light={lightColor} />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <script dangerouslySetInnerHTML={{ __html: initializePreferences }} />
         <link rel="stylesheet" href="/styles.css" />
