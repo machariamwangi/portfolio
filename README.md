@@ -12,7 +12,7 @@ The Engineering Notebook covers C# and .NET, deployment with CircleCI, DevOps an
 
 ## Run locally
 
-The site uses React and the Next.js Pages Router. Use Node.js 20.9 or newer and npm. Run these commands from the repository root.
+The site uses React and the Next.js Pages Router. Use Node.js 24.x and npm. Run these commands from the repository root.
 
 ```sh
 npm ci

@@ -7,8 +7,9 @@ backend:
   name: github
   repo: machariamwangi/portfolio
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  base_url: https://elijahmwangi.net
+  auth_endpoint: api/cms-auth
+  auth_scope: public_repo
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
