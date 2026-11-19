@@ -4,7 +4,7 @@ The browser editor lives at `/admin/`. It uses **Decap CMS 3.17.3**, pinned in `
 
 ## Write locally
 
-Use Node.js 20.9 or newer. From the project root, install the locked dependencies and start the portfolio.
+Use Node.js 24.x. From the project root, install the locked dependencies and start the portfolio.
 
 ```powershell
 npm ci

@@ -13,7 +13,7 @@
     "start": "node scripts/serve.mjs"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": "24.x"
   },
   "dependencies": {
     "gray-matter": "4.0.3",
