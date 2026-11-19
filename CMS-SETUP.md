@@ -25,22 +25,16 @@ New posts have **Keep as draft** enabled. Save the article while writing; switch
 
 Markdown image uploads are stored in `public/images/uploads/` and referenced as `/images/uploads/...`. Next.js includes `public/` in its static export. Reload the development page after saving content; for a manual production build, run `npm run build`.
 
-## Enable editing on the deployed Netlify site
+## Enable editing at elijahmwangi.net
 
-Local editing is configured. **Hosted login and saving still require account setup.** The editor targets the protected `main` branch of `machariamwangi/portfolio`. Its editorial workflow saves changes on a separate branch and opens a pull request for review.
+The hosted editor signs in through GitHub using the portfolio’s Vercel function at `/api/cms-auth`. The public pages still use Next.js static export. Opening the writing desk on a Vercel deployment alias takes you to the production editor so that the sign-in popup and the editor share an origin.
 
-The selected backend is GitHub with Netlify's OAuth provider service. Editors need GitHub write access to the configured repository. No Netlify Identity widget or Git Gateway is used. Netlify marks Git Gateway as deprecated and discourages new configurations; see its [Git Gateway notice](https://docs.netlify.com/manage/security/secure-access-to-sites/git-gateway/).
+1. Register a GitHub OAuth app called **Elijah Mwangi Writing Desk**. Set its homepage to `https://elijahmwangi.net` and its **Authorization callback URL** to `https://elijahmwangi.net/api/cms-auth`. [Register an OAuth app](https://github.com/settings/applications/new)
+2. In the Vercel **portfolio** project, open **Settings → Environment Variables**. For **Production**, add `CMS_GITHUB_CLIENT_ID` with the app’s Client ID and `CMS_GITHUB_CLIENT_SECRET` with a newly generated client secret. Enter the secret directly in Vercel as a sensitive value. [Portfolio environment settings](https://vercel.com/elijah-mwangi/portfolio/settings/environment-variables)
+3. Deploy the change to production after saving both variables. If the code is already deployed, redeploy the current production commit so the function receives the values.
+4. Open the writing desk, select **Login with GitHub**, and authorize the app using an account with write access to `machariamwangi/portfolio`. The OAuth app requests GitHub’s `public_repo` scope. [Production writing desk](https://elijahmwangi.net/admin/) · [Decap GitHub backend](https://decapcms.org/docs/github-backend/)
 
-For the Netlify project serving the new portfolio:
-
-1. Register a [GitHub OAuth application](https://github.com/settings/developers). Use the deployed portfolio as its homepage and `https://api.netlify.com/auth/done` as its authorization callback URL.
-2. In Netlify, open **Project configuration → Security → OAuth → Authentication Providers → Install Provider**, select GitHub, and enter that application's Client ID and Client Secret. Keep the secret in Netlify; never add it to this repository or `config.yml`.
-3. Deploy the portfolio source, then open its `/admin/` page and sign in with your GitHub account.
-4. Save a draft and check its pull request in GitHub. When the article is ready, turn off **Keep as draft**, save the change, and merge the pull request after the required checks and approvals. The article appears after the deployment from `main` succeeds.
-
-Netlify OAuth setup follows the current [official provider-token instructions](https://docs.netlify.com/manage/security/secure-access-to-sites/oauth-provider-tokens/). The [Decap GitHub backend documentation](https://decapcms.org/docs/github-backend/) describes repository access requirements.
-
-The Netlify OAuth configuration is specific to that Netlify project. A private Sites preview or another host does not automatically gain remote editing; use the local editor meanwhile, or configure an appropriate [external OAuth service](https://decapcms.org/docs/backends-overview/) and update the backend settings for that host.
+Save an article as a draft to create its editorial branch and pull request. When it is ready to publish, turn off **Keep as draft**, save, and merge the pull request after the required checks pass. Vercel deploys it from `main`.
 
 ## Integration notes
 
